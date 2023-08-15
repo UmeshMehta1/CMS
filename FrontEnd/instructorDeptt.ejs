@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Instructors</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    table {
+
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+      background-color: #6699FF;
+      color: white;
+    }
+
+    h1, h2{
+      text-align: center;
+    }
+  </style>
+</head>
+</head>
+<body>
+
+  <h2>Instructor's Department</h2>
+  <br>
+  <div class="container">
+   <table>
+    <tr>
+      <th>Department Name</th>
+      <th>Building</th>
+      <th>Budget</th>
+    </tr>
+
+    <tr>
+      <td><%=department.deptName%></td>
+      <td><%=department.building%></td>
+      <td>&#8369 <%=department.budget%></td>
+    </tr>
+   </table>
+  </div>
+
+</body>
+</html>

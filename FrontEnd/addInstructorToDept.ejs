@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Department</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+</head>
+
+<style type="text/css">
+  h2{
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div class="container">
+  <form method="post" action="/departments/<%=name%>/instructors">
+
+  <h2>Add an Instructor to the Department</h2>
+  <div class="form-group">
+    <label for="e1">Instructor ID</label>
+    <input name="instructor_id" type="text" class="form-control" id="e1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="e2">Section ID</label>
+    <input name="section_id"type="text" class="form-control" id="e2" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Section</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+</head>
+
+<style type="text/css">
+  h2{
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div class="container">
+  <form method="post" action="/sections">
+
+  <h2>Add New Section</h2>
+  <div class="form-group">
+    <label for="e1">ID</label>
+    <input name="id" type="text" class="form-control" id="e1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="e2">Semester</label>
+    <input name="semester"type="text" class="form-control" id="e2" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="e3">Year</label>
+    <input name="year" type="text" class="form-control" id="e3" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+
+</body>
+</html>

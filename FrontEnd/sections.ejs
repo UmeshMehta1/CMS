@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Sections</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    table {
+
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+      background-color: #6699FF;
+      color: white;
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    a{
+      color: black;
+    }
+  </style>
+</head>
+</head>
+<body>
+
+  <h1>List of Sections</h1>
+  <br>
+  <div class="container">
+    <table>
+    <tr>
+      <th>ID</th>
+      <th>Semester</th>
+      <th>Year</th>
+      <th></th>
+    </tr>
+
+    <% sections.forEach((section) => {%>
+    <tr>
+      <td><a href="/sections/<%=section.id%>"><%=section.id%></a></td>
+      <td><%=section.semester%></td>
+      <td><%=section.year%></td>
+      <td>
+        <form action="/sections/<%=section.id%>/delete" method ="POST">
+          <button class ="btn btn-danger"> <i class="fas fa-trash-alt" style="padding-right: 5px"></i> Delete</button>
+        </form>
+      </td>
+    </tr>
+    <%})%>
+    </table>
+
+    <a href="/sections/create">Add New Section</a>
+
+  </div>
+</body>
+</html>

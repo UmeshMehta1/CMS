@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Section Instructors</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    table {
+
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+      background-color: #6699FF;
+      color: white;
+    }
+
+    h1, h2{
+      text-align: center;
+    }
+
+    a{
+      color: black;
+    }
+  </style>
+</head>
+</head>
+<body>
+
+  <h2>Instructor Details</h2>
+  <br>
+  <div class="container">
+   <table>
+    <tr>
+      <th>Name</th>
+      <th>Department Name</th>
+      <th>Salary</th>
+      <th>ID</th>
+    </tr>
+
+    <% instructors.forEach((instructor) => {%>
+    <tr>
+     <td><a href="/instructors/<%=instructor.id%>"><%=instructor.name%></a></td><%=instructor.department_name%></td>
+      <td>₹ <%=instructor.salary%></td>
+      <td><%=instructor.id%></td>
+    </tr>
+    <%})%>
+   </table>
+  </div>
+
+</body>
+</html>
